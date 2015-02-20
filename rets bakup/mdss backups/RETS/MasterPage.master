@@ -1,0 +1,124 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register Assembly="Janus.Web.UI.v3" Namespace="Janus.Web.UI.Dock" TagPrefix="jwu" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        &nbsp;
+        <div style="z-index: 100; left: 295px; width: 710px; position: absolute; top: 104px;
+            height: 329px; background-color: white;">
+            &nbsp;&nbsp;
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+            <br />
+            <br />
+            <br />
+            <br />
+            <div style="z-index: 100; left: 105px; width: 108px; position: absolute; top: -78px;
+                height: 29px">
+                <span style="font-size: 24pt; color: #0066ff">CREEC</span></div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            &nbsp;<br />
+            <br />
+            <br />
+            <br />
+        </asp:contentplaceholder>
+            <hr style="border-top: #339900 thin solid; z-index: 101; left: -204px; width: 920px;
+                position: absolute; top: -22px; height: 2px" />
+        </div>
+        <div style="z-index: 101; left: 78px; width: 210px; position: absolute; top: 159px;
+            height: 483px; background-color: lavender;">
+                <asp:TreeView ID="TreeView1" runat="server" Height="381px" ImageSet="Faq"
+                    Style="z-index: 100; left: 4px; position: absolute; top: 6px" Width="191px" LineImagesFolder="~/TreeLineImages">
+                    <ParentNodeStyle Font-Bold="False" />
+                    <HoverNodeStyle Font-Underline="True" ForeColor="Purple" />
+                    <SelectedNodeStyle Font-Underline="True" HorizontalPadding="0px" VerticalPadding="0px" />
+                    <Nodes>
+                        <asp:TreeNode Text="Energy Sources" Value="Energy Sources">
+                            <asp:TreeNode Text="New Source Details" Value="New Source Details"></asp:TreeNode>
+                            <asp:TreeNode Text="List Source Details" Value="List Source Details"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="Applications" Value="Applications">
+                            <asp:TreeNode Text="List Applications" Value="List Applications"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="Demands" Value="Demands">
+                            <asp:TreeNode Text="Demands" Value="Demands"></asp:TreeNode>
+                            <asp:TreeNode Text="List Demands" Value="List Demands"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="Technologies" Value="Technologies">
+                            <asp:TreeNode Text="Available Technologies" Value="Available Technologies"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="Human Factor" Value="Human Factor">
+                            <asp:TreeNode Text="List Factors" Value="List Factors"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="System Setup" Value="System Setup">
+                            <asp:TreeNode Text="Countries" Value="Countries" NavigateUrl="~/Countries.aspx"></asp:TreeNode>
+                            <asp:TreeNode Text="Regions" Value="Regions" NavigateUrl="~/Region.aspx"></asp:TreeNode>
+                            <asp:TreeNode NavigateUrl="~/districts.aspx" Text="Districts" Value="Districts"></asp:TreeNode>
+                            <asp:TreeNode NavigateUrl="~/Subcounties.aspx" Text="SubCounties" Value="SubCounties">
+                            </asp:TreeNode>
+                        </asp:TreeNode>
+                    </Nodes>
+                    <NodeStyle Font-Names="Tahoma" Font-Size="8pt" ForeColor="DarkBlue" HorizontalPadding="5px"
+                        NodeSpacing="0px" VerticalPadding="0px" />
+                </asp:TreeView>
+        </div>
+        <div style="border-top-width: thin; border-left-width: thin; z-index: 102; border-left-color: gray;
+            left: 289px; border-bottom-width: thin; border-bottom-color: gray; width: 530px;
+            border-top-color: gray; position: absolute; top: 2px; height: 74px; background-color: #ffffff;
+            text-align: center; border-right-width: thin; border-right-color: gray">
+            <span style="font-size: 48pt; color: #00cc00; font-family: Utsaah">
+                <div style="z-index: 100; left: 0px; width: 39px; position: absolute; top: 0px; height: 74px;
+                    background-color: black; font-style: italic;">
+                </div>
+                <div style="z-index: 103; left: 66px; width: 29px; position: absolute; top: 0px;
+                    height: 73px; background-color: red; font-style: italic;">
+                </div>
+                <div style="z-index: 102; left: 36px; width: 31px; color: #ffff00; position: absolute;
+                    top: 1px; height: 73px; background-color: #ffff00; font-style: italic;">
+                </div>
+                <span style="font-size: 24pt"><strong>
+                RENERGY</strong></span><em> &nbsp; </em>
+                <div style="z-index: 104; left: 501px; width: 28px; position: absolute; top: 0px;
+                    height: 74px; background-color: red; font-style: italic;">
+                </div>
+                <div style="z-index: 105; left: 475px; width: 31px; color: #ffff00; position: absolute;
+                    top: 1px; height: 73px; background-color: #ffff00; font-style: italic;">
+                </div>
+                <div style="z-index: 106; left: 442px; width: 34px; position: absolute; top: 1px;
+                    height: 73px; background-color: black; font-style: italic;">
+                </div>
+                <img src="icons/creec.jpg" style="z-index: 107; left: 600px; position: absolute;
+                    top: 20px" />
+            </span>
+        </div>
+        <div style="z-index: 103; left: 82px; width: 94px; position: absolute; top: 8px;
+            height: 69px">
+            <img src="icons/world%20bank.jpg" style="z-index: 100; left: 0px; width: 90px; position: absolute;
+                top: -4px; height: 71px" />
+        </div>
+    </div>
+    </form>
+</body>
+</html>

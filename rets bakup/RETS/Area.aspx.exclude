@@ -1,0 +1,109 @@
+<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Area.aspx.cs" Inherits="Area" Title="Untitled Page" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <br />
+    <br />
+    <asp:TextBox ID="txtcode" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="13px"
+        Style="z-index: 100; left: 314px; position: absolute; top: 73px" Width="119px"></asp:TextBox>
+    <asp:DropDownList ID="cbocountry" runat="server" AppendDataBoundItems="True" AutoPostBack="True"
+        DataSourceID="SqlDataSource1" DataTextField="Country_Name" DataValueField="Country_Code"
+        Font-Names="Verdana" Font-Size="8pt" Height="19px" OnSelectedIndexChanged="cbocountry_SelectedIndexChanged"
+        Style="z-index: 101; left: 314px; position: absolute; top: 103px" TabIndex="1"
+        Width="126px">
+        <asp:ListItem>Select Country.........</asp:ListItem>
+    </asp:DropDownList>
+    <asp:DropDownList ID="cboregion" runat="server" AppendDataBoundItems="True" AutoPostBack="True"
+        DataSourceID="SqlDataSource2" DataTextField="Region_Name" DataValueField="Region_Code"
+        Font-Names="Verdana" Font-Size="8pt" Height="18px" OnSelectedIndexChanged="cboregion_SelectedIndexChanged"
+        Style="z-index: 102; left: 314px; position: absolute; top: 133px" TabIndex="2"
+        Width="126px">
+        <asp:ListItem>Select Region............</asp:ListItem>
+    </asp:DropDownList>
+    <asp:DropDownList ID="cbodistrict" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource3"
+        DataTextField="District_Name" DataValueField="District_Id" Font-Names="Verdana"
+        Font-Size="8pt" Height="21px" OnSelectedIndexChanged="cbodistrict_SelectedIndexChanged"
+        Style="z-index: 103; left: 314px; position: absolute; top: 162px" TabIndex="3"
+        Width="126px">
+        <asp:ListItem>Select District................</asp:ListItem>
+    </asp:DropDownList>
+    <asp:TextBox ID="txtsubcounty" runat="server" Font-Names="Verdana" Font-Size="8pt"
+        Height="13px" Style="z-index: 104; left: 314px; position: absolute; top: 188px"
+        TabIndex="4" Width="117px"></asp:TextBox>
+    <br />
+    <asp:Label ID="Label1" runat="server" Font-Names="Verdana" Font-Size="8pt" ForeColor="#009933"
+        Style="z-index: 105; left: 266px; position: absolute; top: 133px" Text="Region:"></asp:Label>
+    <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Names="Verdana" Font-Size="8pt"
+        ForeColor="#009933" Style="z-index: 106; left: 215px; position: absolute; top: 73px"
+        Text="Location Code:"></asp:Label>
+    <asp:Label ID="Label8" runat="server" Font-Names="Verdana" Font-Size="8pt" ForeColor="#009933"
+        Style="z-index: 107; left: 237px; position: absolute; top: 189px" Text="Sub-County:"></asp:Label>
+    <asp:Label ID="Label9" runat="server" Font-Names="Verdana" Font-Size="8pt" ForeColor="#009933"
+        Style="z-index: 108; left: 259px; position: absolute; top: 102px" Text="Country:"></asp:Label>
+    <asp:Label ID="Label10" runat="server" Font-Names="Verdana" Font-Size="8pt" ForeColor="#009933"
+        Style="z-index: 109; left: 265px; position: absolute; top: 165px" Text="District:"></asp:Label>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MDSSConnectionString %>"
+        SelectCommand="SELECT [Country_Code], [Country_Name] FROM [Countries]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:MDSSConnectionString %>"
+        SelectCommand="SELECT [Region_Code], [Region_Name] FROM [Regions] WHERE ([Country_Code] = @Country_Code)">
+        <SelectParameters>
+            <asp:ControlParameter ControlID="cbocountry" Name="Country_Code" PropertyName="SelectedValue"
+                Type="String" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:MDSSConnectionString %>"
+        SelectCommand="SELECT [District_Name], [District_Id] FROM [Districts] WHERE ([Region_Code] = @Region_Code)">
+        <SelectParameters>
+            <asp:ControlParameter ControlID="cboregion" Name="Region_Code" PropertyName="SelectedValue"
+                Type="String" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+    <asp:Button ID="btnsave" runat="server" Font-Names="Verdana" Font-Size="Small" Height="21px"
+        OnClick="btnsave_Click" Style="z-index: 110; left: 491px; position: absolute;
+        top: 232px" TabIndex="9" Text="Save" Width="68px" />
+    <asp:TextBox ID="txtdistrict" runat="server" Style="z-index: 111; left: 742px; position: absolute;
+        top: 80px" Visible="False"></asp:TextBox>
+    <asp:TextBox ID="txtregion" runat="server" Style="z-index: 112; left: 752px; position: absolute;
+        top: 90px" Visible="False"></asp:TextBox>
+    <asp:TextBox ID="txtcountry" runat="server" OnTextChanged="TextBox3_TextChanged"
+        Style="z-index: 123; left: 762px; position: absolute; top: 100px" Visible="False"></asp:TextBox>
+    <asp:HyperLink ID="HyperLink1" runat="server" Font-Names="Verdana" Font-Size="Small"
+        NavigateUrl="~/Demands.aspx" Style="z-index: 114; left: 577px; position: absolute;
+        top: 233px" TabIndex="10">Demand Details</asp:HyperLink>
+    <br />
+    <asp:Label ID="Label4" runat="server" Font-Names="Verdana" Font-Size="8pt" ForeColor="#009933"
+        Style="z-index: 115; left: 514px; position: absolute; top: 77px" Text="Site:"></asp:Label>
+    <asp:Label ID="Label5" runat="server" Font-Names="Verdana" Font-Size="8pt" ForeColor="#009933"
+        Style="z-index: 116; left: 497px; position: absolute; top: 109px" Text="Centre:"></asp:Label>
+    <asp:Label ID="Label6" runat="server" Font-Names="Verdana" Font-Size="8pt" ForeColor="#009933"
+        Style="z-index: 117; left: 498px; position: absolute; top: 138px" Text="Village:"></asp:Label>
+    <asp:Label ID="Label7" runat="server" Font-Names="Verdana" Font-Size="8pt" ForeColor="#009933"
+        Style="z-index: 118; left: 501px; position: absolute; top: 167px" Text="Parish:"></asp:Label>
+    <asp:TextBox ID="txtparish" runat="server" Font-Names="Verdana" Font-Size="7pt" Height="15px"
+        Style="z-index: 119; left: 544px; position: absolute; top: 167px" TabIndex="5"
+        Width="142px"></asp:TextBox>
+    <asp:TextBox ID="txtvillage" runat="server" Font-Names="Verdana" Font-Size="7pt"
+        Height="13px" Style="z-index: 120; left: 544px; position: absolute; top: 138px"
+        TabIndex="6" Width="142px"></asp:TextBox>
+    <asp:TextBox ID="txtcentre" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="13px"
+        Style="z-index: 121; left: 544px; position: absolute; top: 109px" TabIndex="7"
+        Width="142px"></asp:TextBox>
+    <asp:TextBox ID="txtsite" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="15px"
+        Style="z-index: 122; left: 544px; position: absolute; top: 75px" TabIndex="8"
+        Width="142px"></asp:TextBox>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</asp:Content>
+

@@ -1,0 +1,63 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master"AutoEventWireup="true"  CodeFile="Regions.aspx.cs" Inherits="_Default" %>
+
+<%@ Register Assembly="Janus.Web.GridEX.v3" Namespace="Janus.Web.GridEX.EditControls"
+    TagPrefix="jwge" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+       
+    </div>
+    </form>
+    <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
+        <br />
+        <br />
+        <br />
+        <asp:Label ID="Label13" runat="server" Style="z-index: 100; left: 122px; position: absolute;
+            top: 251px" Text="Country:"></asp:Label>
+        <asp:Label ID="Label12" runat="server" Style="z-index: 101; left: 95px; position: absolute;
+            top: 207px" Text="Region Name:"></asp:Label>
+        &nbsp;
+        <asp:DropDownList ID="cboCountry" runat="server" Style="z-index: 107; left: 200px;
+            position: absolute; top: 246px" Width="149px">
+        </asp:DropDownList>
+        <asp:Button ID="Button1" runat="server" Style="z-index: 103; left: 156px; position: absolute;
+            top: 316px" Text="Save" />
+        <asp:TextBox ID="txtRegionName" runat="server" Style="z-index: 104; left: 200px; position: absolute;
+            top: 202px"></asp:TextBox>
+        <asp:TextBox ID="txtRegionCode" runat="server" Style="z-index: 105; left: 203px; position: absolute;
+            top: 155px"></asp:TextBox>
+        <asp:Label ID="Label11" runat="server" Style="z-index: 106; left: 92px; position: absolute;
+            top: 157px" Text="Region Code:"></asp:Label>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </asp:Content>
+</body>
+</html>

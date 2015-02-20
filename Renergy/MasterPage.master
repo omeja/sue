@@ -1,0 +1,157 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register Assembly="Janus.Web.UI.v3" Namespace="Janus.Web.UI.Dock" TagPrefix="jwu" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body bgcolor="#ffffff">
+    <form id="form1" runat="server">
+    <div>
+        &nbsp;
+      
+        <table border="0" cellpadding="0" cellspacing="0" style="z-index: 101; left: 0px;
+            width: 98%; position: absolute; top: 0px; height: 80%; border-bottom: white thin solid;">
+            <tr>
+                <td colspan="2" valign="top" style="height: 97px; border-top-width: thick; border-left-width: thick; border-left-color: maroon; border-top-color: maroon; background-color: transparent; border-right-width: thick; border-right-color: maroon; border-bottom: darkred thin solid;">
+                    <asp:Image ID="Image1" runat="server" Height="93px" ImageUrl="~/icons/24X24/hydro.jpg"
+                        Style="z-index: 100; left: 910px; position: absolute; top: 0px" Width="93px" />
+                    <asp:Image ID="Image2" runat="server" Height="93px" ImageUrl="~/icons/24X24/solar.jpg"
+                        Style="z-index: 101; left: 815px; position: absolute; top: 0px" Width="94px" />
+                    <asp:Image ID="Image3" runat="server" Height="101px" ImageUrl="~/icons/24X24/bio.jpg"
+                        Style="z-index: 102; left: 721px; position: absolute; top: -10px" Width="94px" />
+                    <asp:Image ID="Image4" runat="server" Height="95px" ImageUrl="~/icons/24X24/banner2.jpg"
+                        Style="z-index: 103; left: 334px; position: absolute; top: 0px" Width="173px" />
+                    <asp:Image ID="Image5" runat="server" Height="41px" ImageUrl="~/icons/24X24/flag.jpg"
+                        Style="z-index: 104; left: 83px; position: absolute; top: 28px" Width="57px" />
+                    <asp:Image ID="Image6" runat="server" Height="42px" ImageUrl="~/creec.jpg" Style="z-index: 105;
+                        left: 1101px; position: absolute; top: 24px" Width="62px" />
+                    <asp:Image ID="Image7" runat="server" Height="42px" ImageUrl="~/icons/world bank.jpg"
+                        Style="z-index: 107; left: 25px; position: absolute; top: 27px" Width="57px" />
+                    </td>
+            </tr>
+            <tr>
+                <td style="width: 159px; height: 309px;" valign="top" bordercolor="#003300">
+                    &nbsp;&nbsp;
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6" DynamicHorizontalOffset="2"
+                        Font-Names="Verdana" Font-Size="8pt" ForeColor="#990000" Height="189px" StaticSubMenuIndent="10px"
+                        Style="z-index: 100; left: 2px; position: absolute; top: 180px" Width="1px" OnMenuItemClick="Menu1_MenuItemClick">
+                        <StaticSelectedStyle BackColor="#FFCC66" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="#FFFBD6" />
+                        <DynamicSelectedStyle BackColor="#FFCC66" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                        <Items>
+                            <asp:MenuItem Text="Data Input" Value="Areas" ImageUrl="~/icons/24X24/input.jpg">
+                                <asp:MenuItem Text="Area/Location" Value="Input Area" NavigateUrl="~/Areas.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Demands.aspx" Text=" Demands" Value=" Demands"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/sources.aspx" Text=" Sources" Value=" Sources"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Technologies.aspx" Text="Technologies" Value="Technologies">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Application.aspx" Text="Application" Value="Application">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Human Factor.aspx" Text="Human Factors" Value="Human Factors">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Reports" Value="Demands" ImageUrl="~/icons/24X24/Report2.jpg">
+                                <asp:MenuItem NavigateUrl="~/RptDemands.aspx" Text="Demands" Value="Sources"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/RptHydroSources.aspx" Text="Hydro Sources" Value="Technologies">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/RptSolarSources.aspx" Text="Solar Sources" Value="Application">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/RptBiogasSources.aspx" Text="Biogas Sources" Value="Human Factor">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/RptTechnologies.aspx" Text="Technologies" Value="Technologies">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/RptApplications.aspx" Text="Application" Value="View Demands Report">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/RptHumanFactors.aspx" Text="Human Factors" Value="Enter Demand">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+                <td valign="top" style="height: 309px; background-color: #ffffff;">
+                    &nbsp;<br />
+                    <br />
+                    <br />
+                    <div style="border-top: white thin solid; z-index: 100; left: 162px; width: 942px;
+                        border-bottom: white thin solid; position: absolute; top: 102px; height: 320px;
+                        text-align: center">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                        </asp:ContentPlaceHolder>
+                        <span style="font-size: 7pt; color: darkred"><strong>CREEC
+                    Copyright 2012</strong></span></div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
